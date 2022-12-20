@@ -3,7 +3,7 @@
 @section('container')
     <div class="row justify-content-center">
         <div class="col-md-8">
-
+<?php dd($post) ?>
             <h2 class="mb-3">{{ $post->title }}</h2>
 
             <p>By. <a href="/posts?author={{ $post->author->username }}"

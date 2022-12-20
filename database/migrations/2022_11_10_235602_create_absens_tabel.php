@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAbsensTable extends Migration
+class CreateAbsensTabel extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateAbsensTable extends Migration
      */
     public function up()
     {
-        Schema::create('absens', function (Blueprint $table) {
+        Schema::create('absen', function (Blueprint $table) {
             $table->id();
-            $table->string('tanggal', 100)->nullable()->default('text');
-            $table->string('kehadiran', 100)->nullable()->default('text');
+            $table->string('absen', 100)->required();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateAbsensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('absens');
+        Schema::dropIfExists('absen');
     }
 }

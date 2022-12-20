@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Absen;
+use App\Models\Kelas;
 use App\Models\Siswa;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
@@ -39,9 +41,59 @@ class DatabaseSeeder extends Seeder
             'email' => 'yudi@gmail.com',
             'password' => bcrypt('12345')
         ]);
-        Siswa::factory(5)->create();
-       
+        Absen::create([
+            'absen' => '17',
+            ]);
+            Kelas::create([
+                'kelas' => '8a',
+                ]);
+                Absen::create([
+                    'absen' => '19',
+                    ]);
+                    Kelas::create([
+                        'kelas' => '8b',
+                        ]);
 
+       Siswa::create([
+       'nama_siswa' => 'yudi',
+       'tempat' => 'bogor',
+       'tgl_lahir' => '2022-11-01',
+       'alamat' =>'budi asih',
+       'hanphone'  => '085673131178',
+       'jk'  => 'laki laki',
+       'id_kelas'  => '1',
+       'id_absen'  => 1 
+       ]);
+       Siswa::create([
+        'nama_siswa' => 'saeful',
+        'tempat' => 'bogor',
+        'tgl_lahir' => '2022-11-01',
+        'alamat' =>'budi asih',
+        'hanphone'  => '085673131178',
+        'jk'  => 'laki laki',
+        'id_kelas'  => '1',
+        'id_absen'  => 1 
+        ]);
+       Siswa::create([
+        'nama_siswa' => 'rizal',
+        'tempat' => 'bogor',
+        'tgl_lahir' => '2022-11-01',
+        'alamat' =>'budi asih',
+        'hanphone'  => '085673131178',
+        'jk'  => 'laki laki',
+        'id_kelas'  => '2',
+        'id_absen'  => 2 
+        ]);
+        Siswa::create([
+            'nama_siswa' => 'ys',
+            'tempat' => 'bogor',
+            'tgl_lahir' => '2022-11-01',
+            'alamat' =>'budi asih',
+            'hanphone'  => '085673131178',
+            'jk'  => 'laki laki',
+            'id_kelas'  => '2',
+            'id_absen'  => 2 
+            ]);
         // Post::create([
         //     'title' => 'judul kedua',
         //     'category_id' => '2',

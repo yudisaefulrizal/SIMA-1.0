@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AbsenSiswa;
-use App\Http\Requests\StoreAbsenSiswaRequest;
-use App\Http\Requests\UpdateAbsenSiswaRequest;
+use Illuminate\Http\Request;
 
-class AbsenSiswaController extends Controller
+class KelasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +29,10 @@ class AbsenSiswaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreAbsenSiswaRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAbsenSiswaRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +40,10 @@ class AbsenSiswaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\AbsenSiswa  $absenSiswa
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(AbsenSiswa $absenSiswa)
+    public function show($id)
     {
         //
     }
@@ -53,10 +51,10 @@ class AbsenSiswaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\AbsenSiswa  $absenSiswa
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(AbsenSiswa $absenSiswa)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +62,11 @@ class AbsenSiswaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateAbsenSiswaRequest  $request
-     * @param  \App\Models\AbsenSiswa  $absenSiswa
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAbsenSiswaRequest $request, AbsenSiswa $absenSiswa)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +74,10 @@ class AbsenSiswaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\AbsenSiswa  $absenSiswa
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AbsenSiswa $absenSiswa)
+    public function destroy($id)
     {
         //
     }

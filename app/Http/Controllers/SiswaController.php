@@ -14,9 +14,9 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        
-        $siswa = Siswa::with(['absens'])->get();
-     
+
+        $siswa = Siswa::all();
+
         return view('dashboard.siswa.index', ['siswa' => $siswa]);
     }
 

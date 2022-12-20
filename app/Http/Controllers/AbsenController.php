@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Absen;
-use App\Http\Requests\StoreAbsenRequest;
-use App\Http\Requests\UpdateAbsenRequest;
+use Illuminate\Http\Request;
 
 class AbsenController extends Controller
 {
@@ -15,9 +14,7 @@ class AbsenController extends Controller
      */
     public function index()
     {
-        $absen = Absen::with(['siswas'])->get();
-     
-        return view('dashboard.absen.index', ['absen' => $absen]);
+        //
     }
 
     /**
@@ -33,10 +30,10 @@ class AbsenController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreAbsenRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAbsenRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -66,11 +63,11 @@ class AbsenController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateAbsenRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Absen  $absen
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAbsenRequest $request, Absen $absen)
+    public function update(Request $request, Absen $absen)
     {
         //
     }

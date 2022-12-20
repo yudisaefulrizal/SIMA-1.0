@@ -2,11 +2,11 @@
 @section('container')
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <h1>Absen</h1>
-        <form method="get" action="/dashboard/absensisiswa/show">
+        <form method="get" action="/dashboard/absen/show">
             <table class="table table-striped table-sm ">
                 <thead>
                     <tr>
-                        <th scope="col">nama</th>
+                        <th scope="col">tanggal </th>
                         <th scope="col">kehadiran</th>
 
 
@@ -15,18 +15,18 @@
                 <tbody>
 
                     {{-- {{ dd($siswa[1]->absensiSiswa['kehadiran']) }} --}}
-           
+
                     @foreach ($absen as $absen)
                         <tr>
 
-                            <td> <input type="text" value="{{ $absen->tanggal }}" name="nama" id="nama"></td>
-                   
+                            <td> <input type="text" value="{{ $absen->tanggal }}" name="tanggal" id="tanggal"></td>
 
-                    </td>
 
-                    <td> <button type="submit" class="btn btn-primary">edit</button></td>
+                            </td>
 
-                    </tr>
+                            <td><a href="/dashboard/absen/{{ $absen->tanggal }}"> <span data-feather="eye"
+                                class=""></span></a>
+                        </tr>
                     @endforeach
                 </tbody>
                 </body>

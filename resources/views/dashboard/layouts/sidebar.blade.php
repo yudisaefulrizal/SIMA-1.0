@@ -47,6 +47,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/menu" class="nav-link {{ Request::is('menu') ? 'active' : '' }}"
+                        aria-current="page" href="/menu">
+                        <span data-feather="home" class="align-text-bottom"></span>
+                        <p>
+                            Menu
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
                         <span data-feather="file-text" class="align-text-bottom"></span>
                         <p>
