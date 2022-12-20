@@ -13,6 +13,7 @@ use App\Http\Controllers\AbsensiSIswaController;
 use App\Http\Controllers\DasboardPostController;
 use App\Http\Controllers\AdminCategoryController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,10 +61,7 @@ Route::post('logout', [LoginController::class, 'logout']);
 Route::get('register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store']);
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->middleware('auth');
+Route::resource('/dashboard', DashboardController::class)->middleware('auth');
 
 
 Route::get('/dashboard/posts/checkSlug', [DasboardPostController::class, 'checkSlug'])->middleware('auth');

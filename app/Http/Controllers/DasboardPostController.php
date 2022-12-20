@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\menu;
 use App\Models\Category;
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
